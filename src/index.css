@@ -133,7 +133,7 @@ body {
 
 .about-p {
     font-weight: 400;
-    font-size: 11px;
+    font-size: 12px;
     line-height: 15px;
     color: #DCDCDC;
 }
@@ -148,6 +148,13 @@ body {
     line-height: 15px;
     color: #F5F5F5;
     margin-top: 27px;
+}
+
+.interests-p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #DCDCDC;
 }
 
 @media screen and (max-width: 480px) {
