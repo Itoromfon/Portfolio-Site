@@ -72,6 +72,7 @@ body {
 
 .info-email-btn:hover {
     background: #D1D5DB;
+    transition: 1s;
 }
 
 .info-link-btn {
@@ -85,6 +86,7 @@ body {
 .info-link-btn:hover {
     background: #295f9e;
     border: 1px solid #295f9e;
+    transition: 1s;
 }
 
 .info-image-text {
