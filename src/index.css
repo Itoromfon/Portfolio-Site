@@ -157,6 +157,27 @@ body {
     color: #DCDCDC;
 }
 
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #161619;
+    border-radius: 0px 0px 10px 10px;
+    padding: 19px 72px;
+}
+
+.twitter {
+    margin-right: 24px;
+}
+
+.facebook {
+    margin-right: 24px;
+}
+
+.instagram {
+    margin-right: 24px;
+}
+
 @media screen and (max-width: 480px) {
     .container {
         width: 265px;
