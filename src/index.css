@@ -124,6 +124,7 @@ body {
 
 .card {
     margin-top: 49px;
+    margin-right: 18px;
 }
 
 .card-img {
@@ -134,11 +135,10 @@ body {
     margin-bottom: 9px;
 }
 
-.star-usa {
+.star-card {
     display: flex;
     align-items: center;
-    justify-content: center;
-    /* margin-left: -80px; */
+    justify-content: left;
 }
 
 .star {
@@ -161,7 +161,6 @@ body {
 
 .life-lesson {
     font-size: 14px;
-    line-height: 110%;
     color: #222222;
     margin-top: 8px;
     margin-bottom: 8px;
