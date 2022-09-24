@@ -1,21 +1,24 @@
 import React from "react"
-// import Navbar from "./components/Navbar"
-// import Hero from "./components/Hero"
-// import Card from "./components/Card"
-// import diver from "./images/diver.png"
-// import wedding from "./images/wedding.png"
-// import bike from "./images/mountain-bike.png"
+// import Joke from "./components/Joke"
+// import jokeData from "./jokeData"
+import Navbar from "./components/Navbar"
+import Hero from "./components/Hero"
+import Card from "./components/Card"
+import diver from "./images/diver.png"
+import wedding from "./images/wedding.png"
+import bike from "./images/mountain-bike.png"
 
 export default function App() {
+    // const jokeElement = jokeData.map(joke =>  
+    //     <Joke 
+    //         setup={joke.setup}
+    //         punchline={joke.punchline}
+    //     />
+    // )
+    // console.log(jokeElement)
     return (
         <div className="container">
-            
-
-
-
-
-
-            {/* <Navbar />
+            <Navbar />
             <Hero />
             <div className="card-component">
                 <Card
@@ -42,7 +45,7 @@ export default function App() {
                     title="Group Mountain Biking"
                     price="50"
                 />
-            </div> */}
+            </div>
         </div>
     )
 }
