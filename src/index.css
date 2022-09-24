@@ -124,35 +124,14 @@ body {
 
 .card {
     margin-top: 49px;
-    text-align: center;
 }
 
-#diver {
+.card-img {
     width: 176px;
     height: 235px;
     border-radius: 9px;
-    background: url(./images/diver.png);
-    background-size: cover;
-    background-position: center;
-    margin: 0 auto;
+    object-fit: cover;
     margin-bottom: 9px;
-}
-
-.diver-link {
-    display: inline-block;
-    text-decoration: none;
-    background: #FFFFFF;
-    color: #222222;
-    font-size: 12px;
-    line-height: 110%;
-    padding: 5px 6px;
-    margin-top: 6px;
-    border-radius: 4px;
-    margin-left: -70px;
-}
-
-.diver-link:hover {
-    background: #d5d5d5;
 }
 
 .star-usa {
@@ -196,6 +175,12 @@ body {
 
 .bold {
     font-weight: bold;
+}
+
+.card-component {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media screen and (max-width: 480px) {
