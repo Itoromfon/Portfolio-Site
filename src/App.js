@@ -6,6 +6,7 @@ import Card from "./components/Card"
 import diver from "./images/diver.png"
 import wedding from "./images/wedding.png"
 import bike from "./images/mountain-bike.png"
+import data from "./data"
 
 export default function App() {
     return (
