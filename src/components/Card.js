@@ -10,7 +10,7 @@ export default function Card(props) {
                 <img src={star} className="star" alt="star" />
                 <p className="star-p">{props.rating} 
                     <span className="usa-span">
-                        ({props.reviewCount}).{props.country}
+                        ({props.reviewCount}).{props.location}
                     </span>
                 </p>
             </div>

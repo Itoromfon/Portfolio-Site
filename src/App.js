@@ -1,6 +1,5 @@
 import React from "react"
 // import Joke from "./components/Joke"
-// import jokeData from "./jokeData"
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 import Card from "./components/Card"
@@ -9,13 +8,6 @@ import wedding from "./images/wedding.png"
 import bike from "./images/mountain-bike.png"
 
 export default function App() {
-    // const jokeElement = jokeData.map(joke =>  
-    //     <Joke 
-    //         setup={joke.setup}
-    //         punchline={joke.punchline}
-    //     />
-    // )
-    // console.log(jokeElement)
     return (
         <div className="container">
             <Navbar />
@@ -25,25 +17,9 @@ export default function App() {
                     img={diver}
                     rating="5.0" 
                     reviewCount={6}
-                    country="Switzerland"
+                    location="Switzerland"
                     title="Life lessons with Katie Zaferes"
                     price="136"
-                />
-                <Card 
-                    img={wedding}
-                    rating="5.0" 
-                    reviewCount={30}
-                    country="United Kingdom"
-                    title="Learn wedding photography"
-                    price="125"
-                />
-                <Card 
-                    img={bike}
-                    rating="4.8" 
-                    reviewCount={2}
-                    country="USA"
-                    title="Group Mountain Biking"
-                    price="50"
                 />
             </div>
         </div>
