@@ -25,6 +25,28 @@ body {
     justify-content: center;
 }
 
+.hero-text {
+    text-align: center;
+    margin-top: 32px;
+}
+
+.hero-h1 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 110%;
+    color: #000000;
+    margin-bottom: 16px;
+}
+
+.hero-p {
+    width: 320px;
+    margin: 0 auto;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 110%;
+    color: #222222;
+}
+
 .image28 {
     width: 72px;
     height: 96px;
@@ -100,7 +122,91 @@ body {
     height: 96px;
 }
 
+.card {
+    margin-top: 49px;
+    text-align: center;
+}
+
+#diver {
+    width: 176px;
+    height: 235px;
+    border-radius: 9px;
+    background: url(./images/diver.png);
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    margin-bottom: 9px;
+}
+
+.diver-link {
+    display: inline-block;
+    text-decoration: none;
+    background: #FFFFFF;
+    color: #222222;
+    font-size: 12px;
+    line-height: 110%;
+    padding: 5px 6px;
+    margin-top: 6px;
+    border-radius: 4px;
+    margin-left: -70px;
+}
+
+.diver-link:hover {
+    background: #d5d5d5;
+}
+
+.star-usa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-left: -80px; */
+}
+
+.star {
+    width: 14px;
+    height: 14px;
+    margin: 9px 2px 0 0;
+}
+
+.star-p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 110%;
+    color: #222222;
+    margin-bottom: 0;
+}
+
+.usa-span {
+    color: #918E9B;
+}
+
+.life-lesson {
+    font-size: 14px;
+    line-height: 110%;
+    color: #222222;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.person {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
 @media screen and (max-width: 480px) {
+    .hero-h1 {
+        font-size: 23px;
+    }
+
+    .hero-p {
+        font-size: 15px;
+    }
+
     .image28 {
         width: 63px;
         height: 85px;
@@ -110,7 +216,7 @@ body {
         width: 63px;
         height: 64px;
     }
-    
+
     .image26 {
         width: 63px;
         height: 85px;
@@ -120,7 +226,7 @@ body {
         width: 63px;
         height: 85px;
     }
-    
+
     .image29 {
         width: 63px;
         height: 85px;
@@ -130,7 +236,7 @@ body {
         width: 63px;
         height: 85px;
     }
-    
+
     .image23 {
         width: 63px;
         height: 85px;
@@ -140,7 +246,7 @@ body {
         width: 63px;
         height: 85px;
     }
-    
+
     .image24 {
         width: 63px;
         height: 85px;
@@ -148,6 +254,14 @@ body {
 }
 
 @media screen and (max-width: 600px) and (min-width: 481px) {
+    .hero-h1 {
+        font-size: 24px;
+    }
+
+    .hero-p {
+        font-size: 16px;
+    }
+
     .image28 {
         width: 65px;
         height: 87px;
@@ -157,7 +271,7 @@ body {
         width: 65px;
         height: 64px;
     }
-    
+
     .image26 {
         width: 65px;
         height: 87px;
@@ -167,7 +281,7 @@ body {
         width: 65px;
         height: 87px;
     }
-    
+
     .image29 {
         width: 65px;
         height: 87px;
@@ -177,7 +291,7 @@ body {
         width: 65px;
         height: 87px;
     }
-    
+
     .image23 {
         width: 65px;
         height: 87px;
@@ -187,14 +301,22 @@ body {
         width: 65px;
         height: 87px;
     }
-    
+
     .image24 {
         width: 65px;
         height: 87px;
     }
-} 
+}
 
 @media screen and (max-width: 768px) and (min-width: 601px) {
+    .hero-h1 {
+        font-size: 25px;
+    }
+
+    .hero-p {
+        font-size: 16px;
+    }
+
     .image28 {
         width: 67px;
         height: 89px;
@@ -204,7 +326,7 @@ body {
         width: 67px;
         height: 64px;
     }
-    
+
     .image26 {
         width: 67px;
         height: 89px;
@@ -214,7 +336,7 @@ body {
         width: 67px;
         height: 89px;
     }
-    
+
     .image29 {
         width: 67px;
         height: 89px;
@@ -224,7 +346,7 @@ body {
         width: 67px;
         height: 89px;
     }
-    
+
     .image23 {
         width: 67px;
         height: 89px;
@@ -234,7 +356,7 @@ body {
         width: 67px;
         height: 89px;
     }
-    
+
     .image24 {
         width: 67px;
         height: 89px;
@@ -242,6 +364,14 @@ body {
 }
 
 @media screen and (max-width: 900px) and (min-width: 769px) {
+    .hero-h1 {
+        font-size: 26px;
+    }
+
+    .hero-p {
+        font-size: 16px;
+    }
+
     .image28 {
         width: 70px;
         height: 91px;
@@ -251,7 +381,7 @@ body {
         width: 70px;
         height: 64px;
     }
-    
+
     .image26 {
         width: 70px;
         height: 91px;
@@ -261,7 +391,7 @@ body {
         width: 70px;
         height: 91px;
     }
-    
+
     .image29 {
         width: 70px;
         height: 91px;
@@ -271,7 +401,7 @@ body {
         width: 70px;
         height: 91px;
     }
-    
+
     .image23 {
         width: 70px;
         height: 91px;
@@ -281,7 +411,7 @@ body {
         width: 70px;
         height: 91px;
     }
-    
+
     .image24 {
         width: 70px;
         height: 91px;
