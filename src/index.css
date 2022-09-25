@@ -244,12 +244,12 @@ body {
 
     .card-component {
         gap: 0px;
-        justify-content: flex-start;
+        justify-content: space-between;
         margin: 0 15px;
     }
 
     .card-img {
-        width: 150px;
+        width: 153px;
         height: 209px;
     }
 }
@@ -315,8 +315,8 @@ body {
     }
 
     .card-img {
-        width: 160px;
-        height: 219px;
+        width: 155px;
+        height: 214px;
     }
 }
 
@@ -376,7 +376,7 @@ body {
 
     .card-component {
         gap: 0px;
-        justify-content: flex-start;
+        justify-content: center;
         margin: 0 15px;
     }
 
@@ -438,6 +438,17 @@ body {
     .image24 {
         width: 70px;
         height: 91px;
+    }
+
+    .card-component {
+        gap: 0px;
+        justify-content: center;
+        margin: 0 15px;
+    }
+
+    .card-img {
+        width: 165px;
+        height: 224px;
     }
 }
 
