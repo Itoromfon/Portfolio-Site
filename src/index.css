@@ -124,7 +124,11 @@ body {
 
 .card {
     margin-top: 49px;
-    margin-right: 18px;
+    width: 175px;
+    font-size: 12px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-img {
@@ -178,7 +182,9 @@ body {
 
 .card-component {
     display: flex;
-    align-items: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
     justify-content: center;
 }
 
@@ -235,6 +241,17 @@ body {
         width: 63px;
         height: 85px;
     }
+
+    .card-component {
+        gap: 0px;
+        justify-content: flex-start;
+        margin: 0 15px;
+    }
+
+    .card-img {
+        width: 150px;
+        height: 209px;
+    }
 }
 
 @media screen and (max-width: 600px) and (min-width: 481px) {
@@ -290,6 +307,17 @@ body {
         width: 65px;
         height: 87px;
     }
+
+    .card-component {
+        gap: 0px;
+        justify-content: space-between;
+        margin: 0 15px;
+    }
+
+    .card-img {
+        width: 160px;
+        height: 219px;
+    }
 }
 
 @media screen and (max-width: 768px) and (min-width: 601px) {
@@ -344,6 +372,17 @@ body {
     .image24 {
         width: 67px;
         height: 89px;
+    }
+
+    .card-component {
+        gap: 0px;
+        justify-content: flex-start;
+        margin: 0 15px;
+    }
+
+    .card-img {
+        width: 160px;
+        height: 219px;
     }
 }
 
