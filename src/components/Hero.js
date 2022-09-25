@@ -1,13 +1,13 @@
 import React from "react"
-import image28 from "../images/image 28.png"
-import image30 from "../images/image 30.png"
-import image26 from "../images/image 26.jpg"
-import image27 from "../images/image 27.png"
-import image29 from "../images/image 29.png"
-import image22 from "../images/image 22.png"
-import image23 from "../images/image 23.png"
-import image25 from "../images/image 25.png"
-import image24 from "../images/image 24.png"
+import image28 from "../image/image 28.png"
+import image30 from "../image/image 30.png"
+import image26 from "../image/image 26.jpg"
+import image27 from "../image/image 27.png"
+import image29 from "../image/image 29.png"
+import image22 from "../image/image 22.png"
+import image23 from "../image/image 23.png"
+import image25 from "../image/image 25.png"
+import image24 from "../image/image 24.png"
 
 export default function Hero() {
     return (
