@@ -3,14 +3,21 @@ import star from "../image/Star 1.png"
 
 export default function Card(props) {
     console.log(props)
+    let badgeText
+    if (props.openSpots === 0) {
+        badgeText = "SOLD OUT"
+    } else if (props.location === "Online") {
+        badgeText = "ONLINE"
+    }
     return (
         <div className="card">
-            <img src={props.img} className="card-img" alt="card-img" />
+            {badgeText && <div className="card-badge">{badgeText}</div>}
+            <img src={props.coverImg} className="card-img" alt="card-img" />
             <div className="star-card">
                 <img src={star} className="star" alt="star" />
-                <p className="star-p">{props.rating} 
+                <p className="star-p">{props.stats.rating} 
                     <span className="usa-span">
-                        ({props.reviewCount}).{props.location}
+                        ({props.stats.reviewCount}).{props.location}
                     </span>
                 </p>
             </div>
