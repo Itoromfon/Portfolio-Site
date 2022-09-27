@@ -30,6 +30,30 @@
 //     )
 // }
 
+import React from "react"
+import Navbar from "./components/Navbar"
+import Main from "./components/Main"
+import data from "./data"
+
+export default function App() {
+    const mainData = data.map((item) => {
+        return <Main 
+                title={item.title}
+                location={item.location}
+                googleMapsUrl={item.googleMapsUrl}
+                startDate={item.startDate}
+                endDate={item.endDate}
+                description={item.description}
+                imageUrl={item.imageUrl}
+        />
+    })
+    return (
+        <div>
+            <Navbar />
+            {mainData}
+        </div>
+    )
+}
 
 
 
