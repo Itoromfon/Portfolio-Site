@@ -1,11 +1,11 @@
 import React from "react"
-import mountain from "../image/mountain.png"
 import droplet from "../image/droplet.png"
+
 
 export default function Main(props) {
     return (
         <main className="main">
-            <img src={mountain} className="main-img" alt={mountain} />
+            <img src={props.imageUrl} className="main-img" alt="mountain" />
             <div>
                 <div className="map">
                     <img src={droplet} className="droplet" alt="droplet" />
