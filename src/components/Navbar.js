@@ -10,7 +10,7 @@
 
 
 import React from "react"
-import navImage from "../images/travel-image.png"
+import navImage from "../image/travel-image.png"
 
 export default function Navbar() {
     return (

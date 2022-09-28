@@ -1,5 +1,5 @@
 import React from "react"
-import droplet from "../images/droplet.png"
+import droplet from "../image/droplet.png"
 
 
 export default function Main(props) {
