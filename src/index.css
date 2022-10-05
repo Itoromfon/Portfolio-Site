@@ -4,6 +4,7 @@
 
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Karla', sans-serif;
 }
 
@@ -73,10 +74,22 @@ body {
     color: #FFFFFF;
     background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .meme-btn:hover {
     background: linear-gradient(90.41deg, #56126d 1.14%, #5d0979 100%);
+}
+
+.meme--image {
+    width: 477px;
+    height: 268px;
+    border-radius: 5px;
+}
+
+.img-div {
+    display: grid;
+    justify-items: center;
 }
 
 @media screen and (max-width: 480px) {
@@ -94,8 +107,8 @@ body {
     }
 
     .input {
-        width: 245px;
-        height: 40px;
+        width: 310px;
+        height: 42px;
         margin: 5px 0;
     }
 
@@ -107,6 +120,12 @@ body {
     .meme-btn {
         font-size: 15px;
         padding: 11px 40px;
+    }
+
+    .meme--image {
+        width: 310px;
+        height: 190px;
+        border-radius: 5px;
     }
 }
 
@@ -129,7 +148,7 @@ body {
     }
 
     .input {
-        width: 250px;
+        width: 330px;
         height: 43px;
         margin: 5px 0;
     }
@@ -142,6 +161,12 @@ body {
     .meme-btn {
         font-size: 16px;
         padding: 12px 41px;
+    }
+
+    .meme--image {
+        width: 330px;
+        height: 200px;
+        border-radius: 5px;
     }
 }
 
@@ -164,7 +189,7 @@ body {
     }
 
     .input {
-        width: 265px;
+        width: 350px;
         height: 45px;
         margin: 5px 0;
     }
@@ -177,6 +202,12 @@ body {
     .meme-btn {
         font-size: 17px;
         padding: 13px 42px;
+    }
+
+    .meme--image {
+        width: 350px;
+        height: 210px;
+        border-radius: 5px;
     }
 }
 
@@ -199,8 +230,8 @@ body {
     }
 
     .input {
-        width: 270px;
-        height: 45px;
+        width: 370px;
+        height: 48px;
         margin: 5px 0;
     }
 
@@ -212,6 +243,12 @@ body {
     .meme-btn {
         font-size: 17px;
         padding: 14px 43px;
+    }
+
+    .meme--image {
+        width: 370px;
+        height: 230px;
+        border-radius: 5px;
     }
 }
 
