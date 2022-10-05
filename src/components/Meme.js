@@ -26,12 +26,12 @@ export default function Meme() {
                         placeholder="Bottom text"
                     />
                 </div>
-                <a onClick={getMemeImage} className="meme-btn" href="#">
+                <a onClick={getMemeImage} className="meme-btn" href="./#">
                     Get a new meme image
                 </a>
             </div>
             <div className="img-div">
-                <img src={memeImage} className="meme--image" href="./#" />
+                <img src={memeImage} className="meme--image" alt="meme-img" href="./#" />
             </div>
         </main>
     )
