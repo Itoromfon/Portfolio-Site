@@ -4,304 +4,188 @@
 
 body {
     margin: 0;
-    padding: 0;
+    background: #0B2434;
+    padding: 1.875rem 1.25rem;
     font-family: 'Karla', sans-serif;
 }
 
-.header {
-    display: flex;
-    align-items: center;
-    height: 65px;
-    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
-    padding: 20px 30px;
-}
-
-.meme-face {
-    width: 32px;
-    height: 27px;
-    margin-right: 7px;
-}
-
-.header-h2 {
-    margin-right: auto;
-    font-size: 1.375rem;
-    line-height: 24px;
-    letter-spacing: -0.1em;
-    color: #FFFFFF;
-}
-
-.header-h4 {
-    font-size: 0.9375rem;
-    line-height: 15px;
-    color: #FFFFFF;
-}
-
-.form {
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: 36px;
+    justify-content: space-around;
+    background-color: #F5F5F5;
+    border-radius: 0.625rem;
+    height: 100vh;
 }
 
-.input {
-    display: inline-block;
-    width: 250px;
-    height: 40px;
-    border: 1px solid #D5D4D8;
-    border-radius: 5px;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-    color: #0D0D0D;
-    padding: 11px;
-}
-
-.inputs {
-    display: flex;
-    gap: 17px;
-    margin-bottom: 15px;
-}
-
-.meme-btn {
+.title {
+    font-size: 1.625rem;
     font-weight: 700;
-    font-size: 16px;
-    text-decoration: none;
-    padding: 12px 176px;
-    line-height: 19px;
+    margin-bottom: 0.5rem;
+    line-height: 2rem;
+    letter-spacing: -0.03em;
+    color: #2B283A;
+}
+
+.instructions {
+    font-weight: 400;
+    font-size: 1.0625rem;
+    line-height: 1rem;
+    letter-spacing: -0.03em;
+    color: #4A4E74;
+    margin-top: 0;
+    /* width: 300px; */
     text-align: center;
-    letter-spacing: -0.1em;
-    color: #FFFFFF;
-    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
-    border-radius: 5px;
+}
+
+.die-face {
+    height: 3.125rem;
+    width: 3.125rem;
+    font-weight: 700;
+    padding: 0.625rem 0.9375rem;
+    color: #2B283A;
+    box-shadow: 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 
-.meme-btn:hover {
-    background: linear-gradient(90.41deg, #56126d 1.14%, #5d0979 100%);
+.die-name {
+    font-size: 2rem;
 }
 
-.meme--image {
-    width: 477px;
-    height: 268px;
-    border-radius: 5px;
-}
-
-.img-div {
-    position: relative;
+.dice-container {
     display: grid;
-    justify-items: center;
+    grid-template: auto auto/ repeat(5, 1fr);
+    gap: 1.125rem;
+    margin-bottom: 2.5rem;
 }
 
-.meme--text {
-    position: absolute;
-    width: 80%;
-    text-align: center;
-    left: 50%;
-    transform: translate(-50%);
-    margin: 15px 0;
-    padding: 0 5px;
-    font-family: impact, sans-serif;
-    font-size: 2em;
-    text-transform: uppercase;
+.roll-dice {
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Karla', sans-serif;
+    line-height: 1.2rem;
+    padding: 0.4rem 1.3125rem;
     color: #FFFFFF;
-    letter-spacing: 1px;
-    text-shadow: 
-        2px 2px 0 #000,
-        -2px -2px 0 #000,
-        2px -2px 0 #000,
-        -2px 2px 0 #000,
-        0 2px 0 #000,
-        2px 0 0 #000,
-        0 -2px 0 #000,
-        -2px 0 0 #000,
-        2px 2px 5px #000;
+    background: #5035FF;
+    box-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.18);
+    border: 1px solid #5035FF;
+    border-radius: 0.25rem;
+    cursor: pointer;
 }
 
-.bottom {
-    bottom: 0;
+.roll-dice:focus {
+    outline: none;
 }
 
-.top {
-    top: 0;
+.roll-dice:active {
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.confetti {
+    width: 100%;
+    height: 100%;
 }
 
 @media screen and (max-width: 480px) {
-    .meme-face {
-        width: 32px;
-        height: 28px;
+    .title {
+        font-size: 1.375rem;
     }
 
-    .header-h2 {
-        font-size: 20px;
+    .instructions {
+        font-size: 1rem;
+        width: 320px; 
     }
 
-    .form {
-        margin: 36px;
+    .die-name {
+        font-size: 1.375rem;
     }
 
-    .input {
-        width: 320px;
-        height: 45px;
-        margin: 8px 0;
+    .die-face {
+        height: 2.5rem;
+        width: 2.625rem;
     }
 
-    .inputs {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .meme-btn {
-        font-size: 15px;
-        padding: 11px 40px;
-    }
-
-    .meme--image {
-        width: 320px;
-        height: 195px;
-        border-radius: 5px;
-    }
-
-    .meme--text {
-        font-size: 1.3em;
+    .roll-dice {
+        font-size: 1rem;
     }
 }
 
 @media screen and (max-width: 600px) and (min-width: 481px) {
-    .meme-face {
-        width: 33px;
-        height: 29px;
+    .title {
+        font-size: 1.5rem;
     }
 
-    .header-h2 {
-        font-size: 21px;
+    .instructions {
+        font-size: 1.0625rem;
+        width: 340px; 
     }
 
-    .header-h4 {
-        font-size: 16px;
+    .die-name {
+        font-size: 1.4375rem;
     }
 
-    .form {
-        margin-top: 40px;
+    .die-face {
+        height: 2.5625rem;
+        width: 2.6875rem;
     }
 
-    .input {
-        width: 340px;
-        height: 45px;
-        margin: 8px 0;
-    }
-
-    .inputs {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .meme-btn {
-        font-size: 16px;
-        padding: 12px 41px;
-    }
-
-    .meme--image {
-        width: 340px;
-        height: 205px;
-        border-radius: 5px;
-    }
-
-    .meme--text {
-        font-size: 1.5em;
+    .roll-dice {
+        font-size: 1.0625rem;
     }
 }
 
 @media screen and (max-width: 768px) and (min-width: 601px) {
-    .meme-face {
-        width: 33px;
-        height: 29px;
+    .title {
+        font-size: 1.625rem;
     }
 
-    .header-h2 {
-        font-size: 21px;
+    .instructions {
+        font-size: 1.125rem;
+        width: 22.5rem; 
     }
 
-    .header-h4 {
-        font-size: 16px;
+    .die-name {
+        font-size: 1.5rem;
     }
 
-    .form {
-        margin: 40px;
+    .die-face {
+        height: 2.625rem;
+        width: 2.75rem;
     }
 
-    .input {
-        width: 360px;
-        height: 48px;
-        margin: 5px 0;
-    }
-
-    .inputs {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .meme-btn {
-        font-size: 17px;
-        padding: 13px 42px;
-    }
-
-    .meme--image {
-        width: 360px;
-        height: 215px;
-        border-radius: 5px;
-    }
-
-    .meme--text {
-        font-size: 1.7em;
+    .roll-dice {
+        font-size: 1.125rem;
     }
 }
 
 @media screen and (max-width: 900px) and (min-width: 769px) {
-    .meme-face {
-        width: 36px;
-        height: 32px;
+    .title {
+        font-size: 1.75rem;
     }
 
-    .header-h2 {
-        font-size: 22px;
+    .instructions {
+        font-size: 1.1875rem;
+        width: 23.75rem; 
     }
 
-    .header-h4 {
-        font-size: 17px;
+    .die-name {
+        font-size: 1.5625rem;
     }
 
-    form {
-        margin: 40px;
+    .die-face {
+        height: 2.6875rem;
+        width: 2.8125rem;
     }
 
-    .input {
-        width: 380px;
-        height: 50px;
-        margin: 5px 0;
-    }
-
-    .inputs {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .meme-btn {
-        font-size: 17px;
-        padding: 14px 43px;
-    }
-
-    .meme--image {
-        width: 380px;
-        height: 235px;
-        border-radius: 5px;
-    }
-
-    .meme--text {
-        font-size: 1.9em;
+    .roll-dice {
+        font-size: 1.1875rem;
     }
 }
-
 
 
 

@@ -1,13 +1,83 @@
-import React from "react"
-import Header from "./components/Header"
-import Meme from "./components/Meme"
+import React, {useState, useEffect} from "react"
+// import useWindowSize from "react-use-window-size"
+import Die from "./components/Die"
+import {nanoid} from "nanoid"
+import Confetti from "react-confetti"
 
 export default function App() {
+    const [dice, setDice] = useState(allNewDice())
+    console.log(dice)
+    const [tenzies, setTenzies] = useState(false)
+    // const { width, height } = useWindowSize()
+
+    useEffect(() => {
+        const allHeld = dice.every(diceItem => diceItem.isHeld)
+        const firstValue = dice[0].value
+        const allSameValue = dice.every(diceItem => diceItem.value === firstValue)
+        if (allHeld && allSameValue) {
+            setTenzies(true)
+            console.log("You won")
+        }
+    }, [dice])
+
+    function generateNewDie() {
+        return {
+            value: Math.ceil(Math.random() * 6),
+            isHeld: false,
+            id: nanoid()
+        }
+    }
+
+    function allNewDice() {
+        const numArray = []
+        for (let i = 0; i < 10; i++) {
+            numArray.push(generateNewDie())
+        }
+        return numArray
+    }
+
+    function holdDice(id) {
+        // console.log(id)
+        setDice(prevDice => prevDice.map(diceItem => {
+            return diceItem.id === id ? 
+                {...diceItem, isHeld: !diceItem.isHeld} : 
+                diceItem
+        }))
+    }
+
+    function rollDiceButton() {
+        if (!tenzies) {
+            setDice(prevDice => prevDice.map(diceItem => {
+                return diceItem.isHeld ? 
+                    diceItem : 
+                    generateNewDie()
+            }))
+        } else {
+            setTenzies(false)
+            setDice(allNewDice())
+        }  
+    }
+
+    const diceElements = dice.map(diceItem =>  (
+        <Die 
+            key={diceItem.id} 
+            value={diceItem.value} 
+            isHeld={diceItem.isHeld}
+            holdDice={() => holdDice(diceItem.id)}
+        />
+        )
+    )
+
     return (
-        <div>
-            <Header />
-            <Meme />
-        </div>
+        <main>
+            {tenzies && <Confetti className="confetti" />} 
+            <h1 className="title">Tenzies</h1>
+            <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
+            <div className="dice-container">
+                {diceElements}
+            </div>
+            <button className="roll-dice" onClick={rollDiceButton}>{tenzies ? "New Game" : "Roll"}</button>
+        </main>
     )
 }
 
@@ -219,469 +289,107 @@ export default function App() {
 
 
 
-// import React from "react"
+
+
+
+
+
+// import React, {useState, useEffect} from "react"
+// import Sidebar from "./components/Sidebar"
+// import Editor from "./components/Editor"
+// import { data } from "./data"
+// import Split from "react-split"
+// import {nanoid} from "nanoid"
 
 // export default function App() {
-//     const [starWarsData, setStarWarsData] = React.useState({})
-//     const [count, setCount] = React.useState(1)
-    
-//     /**
-//      * Challenge: Combine `count` with the request URL
-//      * so pressing the "Get Next Character" button will
-//      * get a new character from the Star Wars API.
-//      * Remember: don't forget to consider the dependencies
-//      * array!
-//      */
-    
-//     React.useEffect(function() {
-//         console.log("Effect ran")
-//         fetch(`https://swapi.dev/api/people/${count}`)
-//             .then(res => res.json())
-//             .then(data => setStarWarsData(data))
-//     }, [count])
-    
-//     return (
-//         <div>
-//             <h2>The count is {count}</h2>
-//             <button onClick={() => setCount(prevCount => prevCount + 1)}>Get Next Character</button>
-//             <pre>{JSON.stringify(starWarsData, null, 2)}</pre>
-//         </div>
+//     const [notes, setNotes] = useState(
+//        () => JSON.parse(localStorage.getItem("notes")) || []
 //     )
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React from "react"
-
-// export default function App() {
-//     const [formData, setFormData] = React.useState(
-//         {
-//             email: "",
-//             password: "",
-//             confirmpassword: "",
-//             okayToEmail: true
+//     const [currentNoteId, setCurrentNoteId] = React.useState(
+//         (notes[0] && notes[0].id) || ""
+//     )
+
+//     useEffect(() => {
+//         localStorage.setItem("notes", JSON.stringify(notes))
+//     }, [notes])
+    
+//     function createNewNote() {
+//         const newNote = {
+//             id: nanoid(),
+//             body: "# Type your markdown note's title here"
 //         }
-//     )
-//    console.log(formData)
-
-//     function handleChange(event) {
-//         const {name, value, type, checked} = event.target
-//         setFormData(prevFormData => {
-//             return {
-//                 ...prevFormData,
-//                 [name] : type === "checkbox" ? checked : value
+//         setNotes(prevNotes => [newNote, ...prevNotes])
+//         setCurrentNoteId(newNote.id)
+//     }
+    
+//     function updateNote(text) {
+//         setNotes(oldNotes => {
+//             const newArray = []
+//             for(let i = 0; i < oldNotes.length; i++) {
+//                 const oldNote = oldNotes[i]
+//                 if(oldNote.id === currentNoteId) {
+//                     newArray.unshift({ ...oldNote, body:text})
+//                 } else {
+//                     newArray.push(oldNote)
+//                 }
 //             }
+//             return newArray
 //         })
 //     }
 
-//     function handleSubmit(event) {
-//         event.preventDefault()
-//         // console.log(formData)
-//         console.log(formData.password === formData.confirmpassword ? "Successfully signed up" : "Passwords does not match")
-//         console.log(formData.okayToEmail && "Thanks for signing up to our news letter")
+//     function deleteNote(event, noteId) {
+//         event.stopPropagation()
+//         console.log("Delete Note", noteId)
+//         setNotes(oldNotes => oldNotes.filter(note => note.id !== noteId))
 //     }
-
+    
+//     function findCurrentNote() {
+//         return notes.find(note => {
+//             return note.id === currentNoteId
+//         }) || notes[0]
+//     }
+    
 //     return (
-//         <div className="form-container">
-//             <form className="form" onSubmit={handleSubmit}>
-//                 <input
-//                     type="email"
-//                     placeholder="Email address"
-//                     className="form--input"
-//                     name="email"
-//                     value={formData.email}
-//                     onChange={handleChange}
+//         <main>
+//         {
+//             notes.length > 0 
+//             ?
+//             <Split 
+//                 sizes={[30, 70]} 
+//                 direction="horizontal" 
+//                 className="split"
+//             >
+//                 <Sidebar
+//                     notes={notes}
+//                     currentNote={findCurrentNote()}
+//                     setCurrentNoteId={setCurrentNoteId}
+//                     newNote={createNewNote}
+//                     deleteNote={deleteNote}
 //                 />
-//                 <input
-//                     type="password"
-//                     placeholder="Password"
-//                     className="form--input"
-//                     name="password"
-//                     value={formData.password}
-//                     onChange={handleChange}
-//                 />
-//                 <input
-//                     type="password"
-//                     placeholder="Confirm password"
-//                     className="form--input"
-//                     name="confirmpassword"
-//                     value={formData.confirmpassword}
-//                     onChange={handleChange}
-//                 />
-
-//                 <div className="form--marketing">
-//                     <input
-//                         id="okayToEmail"
-//                         type="checkbox"
-//                         name="okayToEmail"
-//                         onChange={handleChange}
-//                         checked={formData.okayToEmail}
+//                 {
+//                     currentNoteId && 
+//                     notes.length > 0 &&
+//                     <Editor 
+//                         currentNote={findCurrentNote()} 
+//                         updateNote={updateNote} 
 //                     />
-//                     <label htmlFor="okayToEmail">I want to join the newsletter</label>
-//                 </div>
-//                 <button
-//                     className="form--submit"
+//                 }
+//             </Split>
+//             :
+//             <div className="no-notes">
+//                 <h1>You have no notes</h1>
+//                 <button 
+//                     className="first-note" 
+//                     onClick={createNewNote}
 //                 >
-//                     Sign up
+//                     Create one now
 //                 </button>
-//             </form>
-//         </div>
+//             </div>
+            
+//         }
+//         </main>
 //     )
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
