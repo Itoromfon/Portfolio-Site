@@ -15,11 +15,13 @@ export default function App() {
     return (
         <div>
             {/* <StartQuiz startButton={startButton} /> */}
-            <Question />
-            <Question />
-            <Question />
-            <Question />
-            <Question />
+            <div className="question">
+                <Question />
+                <Question />
+                <Question />
+                <Question />
+                <Question />
+            </div>
             <div className="check-button">
                 <button className="check-btn">Check answers</button>
             </div>

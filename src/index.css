@@ -55,6 +55,12 @@ body {
     margin-top: 0;
 }
 
+.question {
+    background-image: url(./images/blob2.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+
 .question-section {
     display: flex;
     flex-direction: column;
@@ -148,7 +154,7 @@ body {
     }
 
     .horizontal-line {
-        width: 23.125rem;
+        width: 22.5rem;
         margin-bottom: 0.625rem;
     }
 }
@@ -173,13 +179,18 @@ body {
         font-size: 1.0625rem;
     }
 
+    .question-btn {
+        gap: 0.5625rem;
+        margin-bottom: 0.75rem;
+    } 
+
     .question-btn > button {
         font-size: 1rem;
         width: 5rem;
     }
 
     .horizontal-line {
-        width: 24.125rem;
+        width: 23.4375rem;
     }
 
     .check-btn {
@@ -207,13 +218,18 @@ body {
         font-size: 1.125rem;
     }
 
+    .question-btn {
+        gap: 0.625rem;
+        margin-bottom: 0.8125rem;
+    } 
+
     .question-btn > button {
         font-size: 1rem;
         width: 5.125rem;
     }
 
     .horizontal-line {
-        width: 24.75rem;
+        width: 24.0625rem;
     }
 
     .check-btn {
@@ -242,13 +258,18 @@ body {
         font-size: 1.1875rem;
     }
 
+    .question-btn {
+        gap: 0.6875rem;
+        margin-bottom: 0.875rem;
+    } 
+
     .question-btn > button {
         font-size: 1.0625rem;
         width: 5.25rem;
     }
 
     .horizontal-line {
-        width: 25.125rem;
+        width: 24.6875rem;
     }
 
     .check-btn {
