@@ -72,7 +72,7 @@ body {
 
 .question-btn {
     display: grid;
-    gap: 13px;
+    gap: 0.8125rem;
     grid-template: auto / repeat(4, 1fr);
     margin-bottom: 0.9375rem;
 }
@@ -85,7 +85,7 @@ body {
     padding: 0.3125rem 1rem;
     width: 5.3125rem;
     border: 0.794239px solid #4D5B9E;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     cursor: pointer;
 }
 
@@ -100,6 +100,7 @@ body {
     display: grid;
     align-items: center;
     justify-content: center;
+    margin-bottom: 1.5625rem;
 }
 
 .check-btn {
@@ -136,13 +137,19 @@ body {
         font-size: 1rem;
     }
 
+    .question-btn {
+        gap: 0.5rem;
+        margin-bottom: 0.625rem;
+    } 
+
     .question-btn > button {
         font-size: 0.9375rem;
         width: 4.8125rem;
     }
 
     .horizontal-line {
-        width: 23.75rem;
+        width: 23.125rem;
+        margin-bottom: 0.625rem;
     }
 }
 
