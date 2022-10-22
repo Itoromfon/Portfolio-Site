@@ -1,16 +1,16 @@
-import React, {useState} from "react";
-import StartQuiz from "./components/StartQuiz";
+// import React, {useState} from "react";
+// import StartQuiz from "./components/StartQuiz";
 import Question from "./components/Question";
 
 // https://opentdb.com/api.php?amount=5&category=13&difficulty=medium&type=multiple
 
 export default function App() {
-    const [quiz, setQuiz] = useState("")
-    console.log(quiz)
+    // const [quiz, setQuiz] = useState("")
+    // console.log(quiz)
 
-    function startButton() {
-        console.log("start quiz!!!")
-    }
+    // function startButton() {
+    //     console.log("start quiz!!!")
+    // }
 
     return (
         <div>
