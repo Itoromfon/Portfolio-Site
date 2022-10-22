@@ -1,85 +1,331 @@
-import React, {useState, useEffect} from "react"
-// import useWindowSize from "react-use-window-size"
-import Die from "./components/Die"
-import {nanoid} from "nanoid"
-import Confetti from "react-confetti"
+import React, {useState} from "react";
+import StartQuiz from "./components/StartQuiz";
+import Question from "./components/Question";
+
+// https://opentdb.com/api.php?amount=5&category=13&difficulty=medium&type=multiple
 
 export default function App() {
-    const [dice, setDice] = useState(allNewDice())
-    console.log(dice)
-    const [tenzies, setTenzies] = useState(false)
-    // const { width, height } = useWindowSize()
+    const [quiz, setQuiz] = useState("")
+    console.log(quiz)
 
-    useEffect(() => {
-        const allHeld = dice.every(diceItem => diceItem.isHeld)
-        const firstValue = dice[0].value
-        const allSameValue = dice.every(diceItem => diceItem.value === firstValue)
-        if (allHeld && allSameValue) {
-            setTenzies(true)
-            console.log("You won")
-        }
-    }, [dice])
-
-    function generateNewDie() {
-        return {
-            value: Math.ceil(Math.random() * 6),
-            isHeld: false,
-            id: nanoid()
-        }
+    function startButton() {
+        console.log("start quiz!!!")
     }
-
-    function allNewDice() {
-        const numArray = []
-        for (let i = 0; i < 10; i++) {
-            numArray.push(generateNewDie())
-        }
-        return numArray
-    }
-
-    function holdDice(id) {
-        // console.log(id)
-        setDice(prevDice => prevDice.map(diceItem => {
-            return diceItem.id === id ? 
-                {...diceItem, isHeld: !diceItem.isHeld} : 
-                diceItem
-        }))
-    }
-
-    function rollDiceButton() {
-        if (!tenzies) {
-            setDice(prevDice => prevDice.map(diceItem => {
-                return diceItem.isHeld ? 
-                    diceItem : 
-                    generateNewDie()
-            }))
-        } else {
-            setTenzies(false)
-            setDice(allNewDice())
-        }  
-    }
-
-    const diceElements = dice.map(diceItem =>  (
-        <Die 
-            key={diceItem.id} 
-            value={diceItem.value} 
-            isHeld={diceItem.isHeld}
-            holdDice={() => holdDice(diceItem.id)}
-        />
-        )
-    )
 
     return (
-        <main>
-            {tenzies && <Confetti className="confetti" />} 
-            <h1 className="title">Tenzies</h1>
-            <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
-            <div className="dice-container">
-                {diceElements}
+        <div>
+            {/* <StartQuiz startButton={startButton} /> */}
+            <Question />
+            <Question />
+            <Question />
+            <Question />
+            <Question />
+            <div className="check-button">
+                <button className="check-btn">Check answers</button>
             </div>
-            <button className="roll-dice" onClick={rollDiceButton}>{tenzies ? "New Game" : "Roll"}</button>
-        </main>
+        </div>
     )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, {useState, useEffect} from "react"
+// // import useWindowSize from "react-use-window-size"
+// import Die from "./components/Die"
+// import {nanoid} from "nanoid"
+// import Confetti from "react-confetti"
+
+// export default function App() {
+//     const [dice, setDice] = useState(allNewDice())
+//     console.log(dice)
+//     const [tenzies, setTenzies] = useState(false)
+//     // const { width, height } = useWindowSize()
+
+//     useEffect(() => {
+//         const allHeld = dice.every(diceItem => diceItem.isHeld)
+//         const firstValue = dice[0].value
+//         const allSameValue = dice.every(diceItem => diceItem.value === firstValue)
+//         if (allHeld && allSameValue) {
+//             setTenzies(true)
+//             console.log("You won")
+//         }
+//     }, [dice])
+
+//     function generateNewDie() {
+//         return {
+//             value: Math.ceil(Math.random() * 6),
+//             isHeld: false,
+//             id: nanoid()
+//         }
+//     }
+
+//     function allNewDice() {
+//         const numArray = []
+//         for (let i = 0; i < 10; i++) {
+//             numArray.push(generateNewDie())
+//         }
+//         return numArray
+//     }
+
+//     function holdDice(id) {
+//         // console.log(id)
+//         setDice(prevDice => prevDice.map(diceItem => {
+//             return diceItem.id === id ?
+//                 {...diceItem, isHeld: !diceItem.isHeld} :
+//                 diceItem
+//         }))
+//     }
+
+//     function rollDiceButton() {
+//         if (!tenzies) {
+//             setDice(prevDice => prevDice.map(diceItem => {
+//                 return diceItem.isHeld ?
+//                     diceItem :
+//                     generateNewDie()
+//             }))
+//         } else {
+//             setTenzies(false)
+//             setDice(allNewDice())
+//         }
+//     }
+
+//     const diceElements = dice.map(diceItem =>  (
+//         <Die
+//             key={diceItem.id}
+//             value={diceItem.value}
+//             isHeld={diceItem.isHeld}
+//             holdDice={() => holdDice(diceItem.id)}
+//         />
+//         )
+//     )
+
+//     return (
+//         <main>
+//             {tenzies && <Confetti className="confetti" />}
+//             <h1 className="title">Tenzies</h1>
+//             <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
+//             <div className="dice-container">
+//                 {diceElements}
+//             </div>
+//             <button className="roll-dice" onClick={rollDiceButton}>{tenzies ? "New Game" : "Roll"}</button>
+//         </main>
+//     )
+// }
 
 
 
@@ -312,7 +558,7 @@ export default function App() {
 //     useEffect(() => {
 //         localStorage.setItem("notes", JSON.stringify(notes))
 //     }, [notes])
-    
+
 //     function createNewNote() {
 //         const newNote = {
 //             id: nanoid(),
@@ -321,7 +567,7 @@ export default function App() {
 //         setNotes(prevNotes => [newNote, ...prevNotes])
 //         setCurrentNoteId(newNote.id)
 //     }
-    
+
 //     function updateNote(text) {
 //         setNotes(oldNotes => {
 //             const newArray = []
@@ -342,21 +588,21 @@ export default function App() {
 //         console.log("Delete Note", noteId)
 //         setNotes(oldNotes => oldNotes.filter(note => note.id !== noteId))
 //     }
-    
+
 //     function findCurrentNote() {
 //         return notes.find(note => {
 //             return note.id === currentNoteId
 //         }) || notes[0]
 //     }
-    
+
 //     return (
 //         <main>
 //         {
-//             notes.length > 0 
+//             notes.length > 0
 //             ?
-//             <Split 
-//                 sizes={[30, 70]} 
-//                 direction="horizontal" 
+//             <Split
+//                 sizes={[30, 70]}
+//                 direction="horizontal"
 //                 className="split"
 //             >
 //                 <Sidebar
@@ -367,25 +613,25 @@ export default function App() {
 //                     deleteNote={deleteNote}
 //                 />
 //                 {
-//                     currentNoteId && 
+//                     currentNoteId &&
 //                     notes.length > 0 &&
-//                     <Editor 
-//                         currentNote={findCurrentNote()} 
-//                         updateNote={updateNote} 
+//                     <Editor
+//                         currentNote={findCurrentNote()}
+//                         updateNote={updateNote}
 //                     />
 //                 }
 //             </Split>
 //             :
 //             <div className="no-notes">
 //                 <h1>You have no notes</h1>
-//                 <button 
-//                     className="first-note" 
+//                 <button
+//                     className="first-note"
 //                     onClick={createNewNote}
 //                 >
 //                     Create one now
 //                 </button>
 //             </div>
-            
+
 //         }
 //         </main>
 //     )
