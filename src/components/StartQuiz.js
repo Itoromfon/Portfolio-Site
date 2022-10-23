@@ -1,4 +1,5 @@
 import React from "react";
+import Question from "./Question";
 
 export default function StartQuiz(props) {
     return (
@@ -7,7 +8,7 @@ export default function StartQuiz(props) {
             <p className="startquiz-p">Some description if needed</p>
             <button 
                 className="startquiz-btn"
-                onClick={props.startButton}
+                onClick={() => props.startButton(<Question />)}
             >
                 Start quiz
             </button>

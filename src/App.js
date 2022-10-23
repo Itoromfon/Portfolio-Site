@@ -1,30 +1,39 @@
-// import React, {useState} from "react";
-// import StartQuiz from "./components/StartQuiz";
+import React, {useState} from "react";
+import StartQuiz from "./components/StartQuiz";
 import Question from "./components/Question";
 
 // https://opentdb.com/api.php?amount=5&category=13&difficulty=medium&type=multiple
 
 export default function App() {
-    // const [quiz, setQuiz] = useState("")
-    // console.log(quiz)
+    const [startquiz, setStartquiz] = useState(true)
+    console.log(startquiz)
+    const [quiz, setQuiz] = React.useState("Questions")
+    console.log(quiz)
 
-    // function startButton() {
-    //     console.log("start quiz!!!")
-    // }
+    function startButton() {
+        console.log("start quiz!!!")
+        setStartquiz(prevStartquiz => !prevStartquiz)
+    }
 
     return (
         <div>
-            {/* <StartQuiz startButton={startButton} /> */}
-            <div className="question">
-                <Question />
-                <Question />
-                <Question />
-                <Question />
-                <Question />
-            </div>
-            <div className="check-button">
-                <button className="check-btn">Check answers</button>
-            </div>
+            {
+            startquiz ?
+            <StartQuiz startButton={startButton} />
+            :
+            <>
+                <div className="question">
+                    <Question />
+                    <Question />
+                    <Question />
+                    <Question />
+                    <Question />
+                </div>
+                <div className="check-button">
+                    <button className="check-btn">Check answers</button>
+                </div>
+            </>
+            }
         </div>
     )
 }
