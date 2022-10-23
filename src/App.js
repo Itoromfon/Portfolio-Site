@@ -7,8 +7,8 @@ import Question from "./components/Question";
 export default function App() {
     const [startquiz, setStartquiz] = useState(true)
     console.log(startquiz)
-    const [quiz, setQuiz] = React.useState("Questions")
-    console.log(quiz)
+    // const [quiz, setQuiz] = React.useState("Questions")
+    // console.log(quiz)
 
     function startButton() {
         console.log("start quiz!!!")
