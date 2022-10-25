@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import StartQuiz from "./components/StartQuiz";
 import Question from "./components/Question";
 
@@ -6,14 +6,34 @@ import Question from "./components/Question";
 
 export default function App() {
     const [startquiz, setStartquiz] = useState(true)
-    console.log(startquiz)
-    // const [quiz, setQuiz] = React.useState("Questions")
+    const [quiz, setQuiz] = React.useState([])
     // console.log(quiz)
 
+    useEffect(() => {
+        async function getQuestions() {
+            const res = await fetch("https://opentdb.com/api.php?amount=5&category=13&difficulty=medium&type=multiple")
+            const data = await res.json()
+            setQuiz(data.results)
+        }
+        getQuestions()
+    }, [])
+    console.log(quiz)
+
     function startButton() {
-        console.log("start quiz!!!")
         setStartquiz(prevStartquiz => !prevStartquiz)
     }
+
+    // function questionsButton() {
+    //     console.log("This is the question button!!!")
+    // }
+
+    // const quizElements = quiz.map(quiz => {
+    //     return <Question questionButton={quiz.results.question} />
+    // })
+
+    const quizElements = quiz.map((quiz) => {
+        return <Question key={quiz.question} question={quiz.question} />
+    })
 
     return (
         <div>
@@ -23,11 +43,12 @@ export default function App() {
             :
             <>
                 <div className="question">
+                    {quizElements}
+                    {/* <Question />
                     <Question />
                     <Question />
                     <Question />
-                    <Question />
-                    <Question />
+                    <Question /> */}
                 </div>
                 <div className="check-button">
                     <button className="check-btn">Check answers</button>
