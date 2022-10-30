@@ -10,6 +10,7 @@ export default function Question({checkResult, options, setScore, question}) {
                     if(item.isHeld && item.correctAnswer){
                         setScore(prevScore => prevScore+1)
                     }
+                    return item
                 }) 
             } 
     },[checkResult, options, setScore])
