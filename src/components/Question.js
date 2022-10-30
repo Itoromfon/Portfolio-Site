@@ -5,14 +5,14 @@ export default function Question({checkResult, options, setScore, question}) {
     const [selectedId, setSelectedId] = useState();
 
     useEffect(()=>{
-        if(checkResult){
-            options.map((item)=> {
-                if(item.isHeld && item.correctAnswer){
-                    setScore(prevScore => prevScore+1)
-                }
-            }) 
-        }
-    },[checkResult])
+            if(checkResult){
+                options.map((item)=> {
+                    if(item.isHeld && item.correctAnswer){
+                        setScore(prevScore => prevScore+1)
+                    }
+                }) 
+            } 
+    },[checkResult, options, setScore])
     
     return (
             <div className="question-section">
