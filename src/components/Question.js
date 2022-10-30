@@ -45,8 +45,6 @@ export default function Question({checkResult, options, setScore, question}) {
                                 {
                                     backgroundColor: "#94D7A2",
                                     color: "#293264",
-                                    borderRadius: "7.94239px",
-                                    marginRight: "12px",
                                     marginTop: "4px"
                                 } : null}
                                 key={item.id}

@@ -88,10 +88,10 @@ body {
 
 .question-btn > button {
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 0.9375rem;
     line-height: 0.75rem;
     color: #293264;
-    padding: 0.625rem 1rem;
+    padding: 0.3125rem 0.3125rem;
     width: 7.5rem;
     border: 0.794239px solid #4D5B9E;
     border-radius: 0.5rem;
@@ -195,7 +195,7 @@ body {
     } 
 
     .question-btn > button {
-        font-size: 0.9375rem;
+        font-size: 0.875rem;
         width: 4.8125rem;
     }
 
