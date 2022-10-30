@@ -1,26 +1,26 @@
 import React, {useState, useEffect} from "react";
 import { decode } from "html-entities"
 
-export default function Question(props) {
+export default function Question({checkResult, options, setScore, question}) {
     const [selectedId, setSelectedId] = useState();
 
-    useEffect(() => {
-        if (props.checkResult) {
-            props.options.map((item) => {
-                if(item.isHeld && item.correctAnswer) {
-                    props.setScore(prevScore => prevScore+1)
+    useEffect(()=>{
+        if(checkResult){
+            options.map((item)=> {
+                if(item.isHeld && item.correctAnswer){
+                    setScore(prevScore => prevScore+1)
                 }
-            })
+            }) 
         }
-    },[props.checkResult])
+    },[checkResult])
     
     return (
             <div className="question-section">
-                <h2 className="question-h2">{decode(props.question)}</h2>
+                <h2 className="question-h2">{decode(question)}</h2>
                 <div>
                 {
-                    !props.checkResult && <div className="question-btn">
-                    {props.options.map(item => ( 
+                    !checkResult && <div className="question-btn">
+                    {options.map(item => ( 
                             <button
                                 key={item.id}
                                 onClick={() => {
@@ -37,8 +37,8 @@ export default function Question(props) {
                         </div>
                     }
                 
-                {props.checkResult && <div className="question-btn">
-                    {props.options.map((item) => {
+                {checkResult && <div className="question-btn">
+                    {options.map((item) => {
                         return <button 
                             style={item.correctAnswer ? 
                                 {
