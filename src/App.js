@@ -1,63 +1,257 @@
 import React, {useEffect, useState} from "react";
 import StartQuiz from "./components/StartQuiz";
 import Question from "./components/Question";
-
-// https://opentdb.com/api.php?amount=5&category=13&difficulty=medium&type=multiple
+import {shuffle} from "lodash";
+import { nanoid } from "nanoid";
 
 export default function App() {
-    const [startquiz, setStartquiz] = useState(true)
-    const [quiz, setQuiz] = React.useState([])
-    // console.log(quiz)
+    const [startquiz, setStartquiz] = useState(false)
+    const [quiz, setQuiz] = useState([])
+    const [checkResult, setCheckResult] = useState(false)
+    const [displayScore, setDisplayScore] = useState(false)
+    const [reset, setReset] = useState(false)
+    const [score, setScore] = useState(0)
+
+    // useEffect(() => {
+    //     async function getQuestions() {
+    //         const res = await fetch("https://opentdb.com/api.php?amount=5&category=13&difficulty=medium&type=multiple")
+    //         const data = await res.json()
+    //         setQuiz(data.results)
+    //     }
+    //     getQuestions()
+    // }, [])
 
     useEffect(() => {
-        async function getQuestions() {
-            const res = await fetch("https://opentdb.com/api.php?amount=5&category=13&difficulty=medium&type=multiple")
-            const data = await res.json()
-            setQuiz(data.results)
-        }
-        getQuestions()
-    }, [])
-    console.log(quiz)
+        fetch("https://opentdb.com/api.php?amount=5&category=13&difficulty=medium&type=multiple")
+        .then(response => response.json())
+        .then(data => {
+            const apiQuiz = data.results
+            console.log(apiQuiz)
+            if (apiQuiz && apiQuiz.length > 0) {
+                const formatedQuiz = apiQuiz.map((q) => {
+                    const arrayOfOptions = [q.correct_answer, ...q.incorrect_answers]
+                    const shuffledArray = shuffle(arrayOfOptions)
+                    const newOptions = shuffledArray.map((item) => {
+                        return {
+                            value: item,
+                            id: nanoid(),
+                            isHeld: false,
+                            correctAnswer: item === q.correct_answer ? true : false
+                        }
+                    })
+                    const question = {
+                        question: q.question,
+                        options: newOptions
+                    }
+                    return question
+                })
+                setQuiz(formatedQuiz)
+            }
+        });
+    }, [reset])
 
     function startButton() {
         setStartquiz(prevStartquiz => !prevStartquiz)
     }
 
-    // function questionsButton() {
-    //     console.log("This is the question button!!!")
-    // }
+    function checkAnswer() {
+        setCheckResult(true)
+        setDisplayScore(true)
+    }
 
-    // const quizElements = quiz.map(quiz => {
-    //     return <Question questionButton={quiz.results.question} />
+    function playAgain() {
+        setStartquiz(false)
+        setCheckResult(false)
+        setDisplayScore(false)
+        setReset(!reset)
+        setScore(0)
+    }
+
+    // const quizElements = quiz.map((q) => {
+    //     return <Question 
+    //                 key={q.question} 
+    //                 question={q.question} 
+    //                 options={q.options}
+    //                 checkResult={checkResult}
+    //                 setScore={setScore}
+    //             />
     // })
 
-    const quizElements = quiz.map((quiz) => {
-        return <Question key={quiz.question} question={quiz.question} />
-    })
-
     return (
-        <div>
-            {
-            startquiz ?
-            <StartQuiz startButton={startButton} />
-            :
-            <>
-                <div className="question">
-                    {quizElements}
-                    {/* <Question />
-                    <Question />
-                    <Question />
-                    <Question />
-                    <Question /> */}
-                </div>
-                <div className="check-button">
-                    <button className="check-btn">Check answers</button>
-                </div>
-            </>
-            }
-        </div>
-    )
+        <>
+            {!startquiz && <StartQuiz startButton={startButton} />}
+            {startquiz && quiz && quiz.length > 0 && quiz.map((q) => {
+                return <Question 
+                    key={q.question} 
+                    question={q.question} 
+                    options={q.options}
+                    checkResult={checkResult}
+                    setScore={setScore}
+            />
+            })}
+        <div className="check-button">
+            {startquiz && !displayScore && <button className="check-btn" onClick={checkAnswer}>Check Answer</button>}
+            {displayScore && <div className="display--score">
+                <h3 className="correct-answers">You scored {score}/5 correct answers</h3>
+                <button onClick={playAgain} className="check-btn">Play Again</button>
+            </div>}
+        </div>         
+        </>
+    );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// {/* {
+//             !startquiz ?
+//             <StartQuiz startButton={startButton} />
+//             :
+//             <>
+//                 <div className="question">
+//                     {quizElements}
+//                 </div>
+//                 <div className="check-button">
+//                     {
+//                         !startquiz ? 
+//                         <div className="restart-quiz">
+//                             <h2>You scored 3/5 correct answers</h2>
+//                             <button className="check-btn">Restart quiz</button>
+//                         </div> 
+//                         :
+//                         <button className="check-btn">
+//                             Check answers
+//                         </button>   
+//                     }
+//                 </div>
+//             </>
+//             } */}
 
 
 
