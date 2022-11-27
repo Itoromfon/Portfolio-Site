@@ -4,7 +4,7 @@ import Main from './components/Main'
 import { useState } from 'react'
 
 export default function App() {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(true)
 
   function handleClick() {
     setDarkMode(prevDarkMode => !prevDarkMode)
@@ -12,7 +12,7 @@ export default function App() {
   }
   return (
     <div className={darkMode ? "dark" : ""}>
-      <div className='dark:bg-gray-900 min-h-screen px-20 pb-20'>
+      <div className='dark:bg-gray-900 min-h-screen px-8 md:px-20 pb-20'>
           <Navbar 
             handleClick={handleClick}
           />

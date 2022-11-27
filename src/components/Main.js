@@ -21,15 +21,15 @@ import memegen from "../images/meme-gen.png"
 export default function Main() {
   return (
     <>
-        <div className='text-center p-10'>
-            <h2 className='dark:text-teal-400 text-teal-600 text-5xl font-medium md:text-6xl'>Itoro Mfon Emmanuel</h2>
-            <h3 className='dark:text-white text-2xl  py-2 md:text-3xl'>Software Engineer / Frontend Developer</h3>
+        <div className='text-center'>
+            <h2 className='dark:text-teal-400 text-teal-600 text-3xl font-medium md:text-6xl'>Itoro Mfon Emmanuel</h2>
+            <h3 className='dark:text-white text-2xl py-2 md:text-3xl'>Software Engineer / Frontend Developer</h3>
             <p className='dark:text-white text-md py-5 leading-8 text-gray-700 md:text-xl max-w-xl mx-auto'>My main aim is to contribute to the growth and development 
                 of any company/organization am working with and offer the best services to 
                 the development of the organization.
             </p>
         </div>
-        <div className='text-4xl flex justify-center gap-8 px-4 py-3 text-gray-600 md:text-6xl md:gap-10'> 
+        <div className='text-4xl flex justify-center gap-14 px-4 py-3 text-gray-600 md:text-6xl md:gap-10'> 
             <a href='https://twitter.com/praiztech' target="_blank" rel="noreferrer">
               <AiFillTwitterCircle className='dark:text-white' />
             </a>
@@ -43,7 +43,7 @@ export default function Main() {
               <AiFillGithub className='dark:text-white' />
             </a>
           </div>
-          <div className="mx-auto rounded-full flex justify-center mt-10 w-60 h-60 md:h-96 md:w-96">
+          <div className="mx-auto rounded-full flex justify-center mt-10 w-80 h-80 md:h-96 md:w-96">
             <img src={itoromfon} alt="itoromfon" className="rounded-full mb-8 " />
           </div>
           <div className='text-center text-gray-600'>
@@ -52,7 +52,7 @@ export default function Main() {
                 My name is Itoro Mfon Emmanuel and am Frontend Developer
                 My Skills includes: React JS, Next JS, HTML, CSS, Javascript, Tailwind css, Typescript, Redux.
             </p>
-            <div className='dark:text-white text-6xl flex px-4 pt-4 justify-center gap-10 text-gray-600'>
+            <div className='dark:text-white text-6xl flex px-4 pt-4 justify-center gap-14 text-gray-600'>
                 <AiFillHtml5 className='' />
                 <IoLogoCss3 />
                 <IoLogoJavascript />
