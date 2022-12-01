@@ -13,7 +13,7 @@ export default function Navbar(props) {
                 />
             </li>
             <li>
-                <a href='https://itoromfon-portfolio.netlify.app/' className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-lg ml-3 md:ml-8 cursor-pointer'>Resume</a>
+                <a href='https://drive.google.com/file/d/1HWNu84YI_-RK3irrHIia6ONsw6JGBpuO/view?usp=sharing' className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-lg ml-3 md:ml-8 cursor-pointer'>Resume</a>
             </li>
         </ul>
     </nav>
