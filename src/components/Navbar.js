@@ -13,7 +13,7 @@ export default function Navbar(props) {
                 />
             </li>
             <li>
-                <a href='https://drive.google.com/file/d/1svB1EkxvGo4O7nNhTMfJMrgQdR1e5FNq/view?usp=sharing' className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-lg ml-3 md:ml-8 cursor-pointer'>Resume</a>
+                <a target='_blank' rel='noreferrer' href='https://drive.google.com/file/d/1svB1EkxvGo4O7nNhTMfJMrgQdR1e5FNq/view?usp=sharing' className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-lg ml-3 md:ml-8 cursor-pointer'>Resume</a>
             </li>
         </ul>
     </nav>

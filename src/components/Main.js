@@ -9,7 +9,8 @@ import {
 import { IoLogoCss3, IoLogoJavascript } from "react-icons/io"
 import { SiTailwindcss } from "react-icons/si"
 import { FaReact } from "react-icons/fa"
-import itoromfon from "../images/itoromfon.png"
+// import itoromfon from "../images/itoromfon.png"
+import mfon from "../images/mfon.png"
 import recipe from "../images/recipe.png"
 import techfirm from "../images/techfirm.png"
 import quizzical from "../images/quizzical.png"
@@ -44,13 +45,13 @@ export default function Main() {
             </a>
           </div>
           <div className="mx-auto rounded-full flex justify-center mt-10 w-80 h-80 md:h-96 md:w-96">
-            <img src={itoromfon} alt="itoromfon" className="rounded-full mb-8 " />
+            <img src={mfon} alt="itoromfon" className="rounded-full mb-8 " />
           </div>
           <div className='text-center text-gray-600'>
             <h3 className='dark:text-white text-3xl font-medium'>Skills I offer</h3>
             <p className='dark:text-white text-md py-5 leading-8 text-gray-700 md:text-xl max-w-xl mx-auto'>
                 My name is Itoro Mfon Emmanuel and am Frontend Developer
-                My Skills includes: React JS, Next JS, HTML, CSS, Javascript, Tailwind css, Typescript, Redux.
+                My Skills includes: React JS, Next JS, HTML, CSS, Javascript, ES6, Git, Styled-Component, Tailwind CSS, Bootstrap, Typescript, Nodejs, Express, Mongo DB
             </p>
             <div className='dark:text-white text-6xl flex px-4 pt-4 justify-center gap-14 text-gray-600'>
                 <AiFillHtml5 className='' />
