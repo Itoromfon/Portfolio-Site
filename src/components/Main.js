@@ -31,12 +31,12 @@ export default function Main() {
             </p>
         </div>
             <div className='flex flex-col md:flex-row justify-center m-5 gap-6 md:gap-6'>
-            <div className='flex gap-6 justify-center'>
+            <div className='flex gap-6 mb-5 md:mb-0 justify-center'>
                 <a 
                   target='_blank'
                   rel='noreferrer'
                   href='https://twitter.com/praiztech'
-                className='bg-teal-500 hover:bg-teal-600 text-lg px-4 py-2 rounded-lg md:px-5 md:py-2 md:rounded-xl text-white md:text-xl md:font-bold'
+                className='bg-teal-500 hover:bg-teal-600 mr-5 text-lg px-4 py-2 rounded-lg md:px-5 md:py-2 md:rounded-xl text-white md:text-xl md:font-bold'
                 >
                   Twitter
                 </a>
@@ -49,12 +49,12 @@ export default function Main() {
                   Github
                 </a>
             </div>
-            <div className='flex gap-6 justify-center'>
+        <div className='flex gap-6 mt-2 md:mt-0 justify-center'>
               <a
                 target='_blank'
                 rel='noreferrer'
                 href='https://www.linkedin.com/in/itoro-mfon-emmanuel-3867991aa/'
-                className='bg-teal-500 hover:bg-teal-600 text-lg px-4 py-2 rounded-lg md:px-5 md:py-2 md:rounded-xl text-white md:text-xl md:font-bold'
+                className='bg-teal-500 hover:bg-teal-600 mr-6 text-lg px-4 py-2 rounded-lg md:px-5 md:py-2 md:rounded-xl text-white md:text-xl md:font-bold'
               >
                 LinkedIn
               </a>
