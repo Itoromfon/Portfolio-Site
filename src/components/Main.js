@@ -30,43 +30,43 @@ export default function Main() {
                 the development of the organization.
             </p>
         </div>
-          <div className='flex flex-col md:flex-row justify-center m-5 gap-3 md:gap-5'>
-          <div className='flex gap-3 justify-center'>
-              <a 
+            <div className='flex flex-col md:flex-row justify-center m-5 gap-6 md:gap-6'>
+            <div className='flex gap-6 justify-center'>
+                <a 
+                  target='_blank'
+                  rel='noreferrer'
+                  href='https://twitter.com/praiztech'
+                className='bg-teal-500 hover:bg-teal-600 text-lg px-4 py-2 rounded-lg md:px-5 md:py-2 md:rounded-xl text-white md:text-xl md:font-bold'
+                >
+                  Twitter
+                </a>
+                <a
+                  target='_blank'
+                  rel='noreferrer'
+                  href='https://github.com/Itoromfon?tab=repositories'
+                  className='bg-teal-500 hover:bg-teal-600 text-lg px-5 py-2 rounded-lg md:px-5 md:py-2 md:rounded-xl text-white md:text-xl md:font-bold'
+                >
+                  Github
+                </a>
+            </div>
+            <div className='flex gap-6 justify-center'>
+              <a
                 target='_blank'
                 rel='noreferrer'
-                href='https://twitter.com/praiztech'
-              className='bg-teal-500 hover:bg-teal-600 text-lg px-4 py-2 rounded-lg md:px-5 md:py-2 md:rounded-xl text-white md:text-xl md:font-bold'
+                href='https://www.linkedin.com/in/itoro-mfon-emmanuel-3867991aa/'
+                className='bg-teal-500 hover:bg-teal-600 text-lg px-4 py-2 rounded-lg md:px-5 md:py-2 md:rounded-xl text-white md:text-xl md:font-bold'
               >
-                Twitter
+                LinkedIn
               </a>
               <a
                 target='_blank'
                 rel='noreferrer'
-                href='https://github.com/Itoromfon?tab=repositories'
+                href='https://m.facebook.com/praise.mfon.73?eav=AfbRlvWHn1qfEDaq26JlDXb2gHH6uk2oMrOGQvUM3NZ5fmR3oEZDb4B3k8EXDvUnaXQ&paipv=0'
                 className='bg-teal-500 hover:bg-teal-600 text-lg px-5 py-2 rounded-lg md:px-5 md:py-2 md:rounded-xl text-white md:text-xl md:font-bold'
               >
-                Github
+                Facebook
               </a>
-          </div>
-          <div className='flex gap-3 justify-center'>
-            <a
-              target='_blank'
-              rel='noreferrer'
-              href='https://www.linkedin.com/in/itoro-mfon-emmanuel-3867991aa/'
-              className='bg-teal-500 hover:bg-teal-600 text-lg px-4 py-2 rounded-lg md:px-5 md:py-2 md:rounded-xl text-white md:text-xl md:font-bold'
-            >
-              LinkedIn
-            </a>
-            <a
-              target='_blank'
-              rel='noreferrer'
-              href='https://m.facebook.com/praise.mfon.73?eav=AfbRlvWHn1qfEDaq26JlDXb2gHH6uk2oMrOGQvUM3NZ5fmR3oEZDb4B3k8EXDvUnaXQ&paipv=0'
-              className='bg-teal-500 hover:bg-teal-600 text-lg px-5 py-2 rounded-lg md:px-5 md:py-2 md:rounded-xl text-white md:text-xl md:font-bold'
-            >
-              Facebook
-            </a>
-        </div>
+            </div>
           </div>
           
           <div className="mx-auto rounded-full flex justify-center mt-10 w-80 h-80 md:h-96 md:w-96">
