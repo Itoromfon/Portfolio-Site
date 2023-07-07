@@ -1,9 +1,9 @@
 import React from 'react'
 import {
- AiFillTwitterCircle, 
- AiFillLinkedin,
- AiFillFacebook,
- AiFillGithub,
+//  AiFillTwitterCircle, 
+//  AiFillLinkedin,
+//  AiFillFacebook,
+//  AiFillGithub,
  AiFillHtml5
 } from "react-icons/ai"
 import { IoLogoCss3, IoLogoJavascript } from "react-icons/io"
@@ -30,20 +30,45 @@ export default function Main() {
                 the development of the organization.
             </p>
         </div>
-        <div className='text-4xl flex justify-center gap-14 px-4 py-3 text-gray-600 md:text-6xl md:gap-10'> 
-            <a href='https://twitter.com/praiztech' target="_blank" rel="noreferrer">
-              <AiFillTwitterCircle className='dark:text-white' />
-            </a>
-            <a href='https://m.facebook.com/praise.mfon.73?eav=AfbRlvWHn1qfEDaq26JlDXb2gHH6uk2oMrOGQvUM3NZ5fmR3oEZDb4B3k8EXDvUnaXQ&paipv=0' target="_blank" rel="noreferrer">
-              <AiFillFacebook className='dark:text-white' />
-            </a>
-            <a href='https://www.linkedin.com/in/itoro-mfon-emmanuel-3867991aa/' target="_blank" rel="noreferrer">
-              <AiFillLinkedin className='dark:text-white' />
-            </a>
-            <a href='https://github.com/Itoromfon?tab=repositories' target="_blank" rel="noreferrer">
-              <AiFillGithub className='dark:text-white' />
-            </a>
+          <div className='flex flex-col md:flex-row justify-center m-5 gap-3 md:gap-5'>
+          <div className='flex gap-3 justify-center'>
+              <a 
+                target='_blank'
+                rel='noreferrer'
+                href='https://twitter.com/praiztech'
+              className='bg-teal-500 hover:bg-teal-600 text-lg px-4 py-2 rounded-lg md:px-5 md:py-2 md:rounded-xl text-white md:text-xl md:font-bold'
+              >
+                Twitter
+              </a>
+              <a
+                target='_blank'
+                rel='noreferrer'
+                href='https://github.com/Itoromfon?tab=repositories'
+                className='bg-teal-500 hover:bg-teal-600 text-lg px-5 py-2 rounded-lg md:px-5 md:py-2 md:rounded-xl text-white md:text-xl md:font-bold'
+              >
+                Github
+              </a>
           </div>
+          <div className='flex gap-3 justify-center'>
+            <a
+              target='_blank'
+              rel='noreferrer'
+              href='https://www.linkedin.com/in/itoro-mfon-emmanuel-3867991aa/'
+              className='bg-teal-500 hover:bg-teal-600 text-lg px-4 py-2 rounded-lg md:px-5 md:py-2 md:rounded-xl text-white md:text-xl md:font-bold'
+            >
+              LinkedIn
+            </a>
+            <a
+              target='_blank'
+              rel='noreferrer'
+              href='https://m.facebook.com/praise.mfon.73?eav=AfbRlvWHn1qfEDaq26JlDXb2gHH6uk2oMrOGQvUM3NZ5fmR3oEZDb4B3k8EXDvUnaXQ&paipv=0'
+              className='bg-teal-500 hover:bg-teal-600 text-lg px-5 py-2 rounded-lg md:px-5 md:py-2 md:rounded-xl text-white md:text-xl md:font-bold'
+            >
+              Facebook
+            </a>
+        </div>
+          </div>
+          
           <div className="mx-auto rounded-full flex justify-center mt-10 w-80 h-80 md:h-96 md:w-96">
             <img src={mfon} alt="itoromfon" className="rounded-full mb-8 " />
           </div>
