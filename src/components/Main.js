@@ -17,14 +17,15 @@ import quizzical from "../images/quizzical.png"
 import tenzies from "../images/tenzies.png"
 import passwordgen from "../images/Password-Gen.png"
 import memegen from "../images/meme-gen.png"
+import itororental from "../images/itororental.png"
 
 
 export default function Main() {
   return (
     <>
         <div className='text-center'>
-            <h2 className='dark:text-teal-400 text-teal-600 text-3xl font-medium md:text-6xl'>Itoro Mfon Emmanuel</h2>
-            <h3 className='dark:text-white text-2xl py-2 md:text-3xl'>Software Engineer / Frontend Developer</h3>
+        <h2 className='dark:text-teal-400 text-rose-500 text-3xl font-bold md:mb-5 md:mt-5 md:text-4xl'>Itoro Mfon Emmanuel</h2>
+            <h3 className='dark:text-white text-gray-700 text-2xl py-2 font-bold md:text-2xl'>Software Engineer / Full Stack Developer</h3>
             <p className='dark:text-white text-md py-5 leading-8 text-gray-700 md:text-xl max-w-xl mx-auto'>My main aim is to contribute to the growth and development 
                 of any company/organization am working with and offer the best services to 
                 the development of the organization.
@@ -36,7 +37,7 @@ export default function Main() {
                   target='_blank'
                   rel='noreferrer'
                   href='https://twitter.com/praiztech'
-                className='bg-teal-500 hover:bg-teal-600 mr-5 text-lg px-4 py-2 rounded-lg md:px-5 md:py-2 md:rounded-xl text-white md:text-xl md:font-bold'
+                  className='dark:bg-teal-500 bg-rose-500 hover:bg-teal-600 mr-5 text-lg px-4 py-2 rounded-lg md:px-5 md:py-2 md:rounded-xl text-white md:text-xl font-bold'
                 >
                   Twitter
                 </a>
@@ -44,17 +45,17 @@ export default function Main() {
                   target='_blank'
                   rel='noreferrer'
                   href='https://github.com/Itoromfon?tab=repositories'
-                  className='bg-teal-500 hover:bg-teal-600 text-lg px-5 py-2 rounded-lg md:px-5 md:py-2 md:rounded-xl text-white md:text-xl md:font-bold'
+                  className='dark:bg-teal-500 bg-rose-500 hover:bg-teal-600 text-lg px-5 py-2 rounded-lg md:px-5 md:py-2 md:rounded-xl text-white md:text-xl font-bold'
                 >
                   Github
                 </a>
             </div>
-        <div className='flex gap-6 mt-2 md:mt-0 justify-center'>
+            <div className='flex gap-6 mt-2 md:mt-0 justify-center'>
               <a
                 target='_blank'
                 rel='noreferrer'
                 href='https://www.linkedin.com/in/itoro-mfon-emmanuel-3867991aa/'
-                className='bg-teal-500 hover:bg-teal-600 mr-6 text-lg px-4 py-2 rounded-lg md:px-5 md:py-2 md:rounded-xl text-white md:text-xl md:font-bold'
+                className='dark:bg-teal-500 bg-rose-500 hover:bg-teal-600 mr-6 text-lg px-4 py-2 rounded-lg md:px-5 md:py-2 md:rounded-xl text-white md:text-xl font-bold'
               >
                 LinkedIn
               </a>
@@ -62,7 +63,7 @@ export default function Main() {
                 target='_blank'
                 rel='noreferrer'
                 href='https://m.facebook.com/praise.mfon.73?eav=AfbRlvWHn1qfEDaq26JlDXb2gHH6uk2oMrOGQvUM3NZ5fmR3oEZDb4B3k8EXDvUnaXQ&paipv=0'
-                className='bg-teal-500 hover:bg-teal-600 text-lg px-5 py-2 rounded-lg md:px-5 md:py-2 md:rounded-xl text-white md:text-xl md:font-bold'
+                className='dark:bg-teal-500  bg-rose-500 hover:bg-teal-600 text-lg px-5 py-2 rounded-lg md:px-5 md:py-2 md:rounded-xl text-white md:text-xl font-bold'
               >
                 Facebook
               </a>
@@ -73,7 +74,7 @@ export default function Main() {
             <img src={mfon} alt="itoromfon" className="rounded-full mb-8 " />
           </div>
           <div className='text-center text-gray-600'>
-            <h3 className='dark:text-white text-3xl font-medium'>Skills I offer</h3>
+        <h3 className='dark:text-white text-gray-700 font-bold md:text-2xl text-3xl font-medium'>Skills I offer</h3>
             <p className='dark:text-white text-md py-5 leading-8 text-gray-700 md:text-xl max-w-xl mx-auto'>
                 My name is Itoro Mfon Emmanuel and am Frontend Developer
                 My Skills includes: React JS, Next JS, HTML, CSS, Javascript, ES6, Git, Styled-Component, Tailwind CSS, Bootstrap, Typescript, Nodejs, Express, Mongo DB
@@ -87,20 +88,28 @@ export default function Main() {
             </div>
           </div>
           <div className='text-center mt-10'>
-            <h3 className='dark:text-white font-medium text-3xl'>Portfolio</h3>
+        <h3 className='dark:text-white text-gray-700 font-bold text-3xl'>Portfolio</h3>
             <p className='dark:text-white text-md py-5 leading-8 text-gray-700 md:text-xl max-w-xl mx-auto'>My Portfolio includes projects that I have worked on which includes
                 React JS project, Next JS project and also Javascript Project and
                 I have build project using tailwind CSS. here are some of my Projects. 
                 Please You can check it out:
             </p>
           </div>
-          <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
+          <div className='flex flex-col mb-10 gap-10 py-10 lg:flex-row lg:flex-wrap'>
+            <div className='basis-1/3 flex-1'>
+              <a href='https://itoro-rent-home.vercel.app/' className='dark:text-rose-400' target="_blank" rel="noreferrer">
+                <img src={itororental} alt="itororental" className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive" />
+              </a>
+              <div className='m-5 text-center text-white'>
+            <a className='dark:text-teal-500 text-rose-500 font-bold underline md:text-2xl' href='https://itoro-rent-home.vercel.app/' target="_blank" rel="noreferrer">https://itoro-rent-home.vercel.app/</a>
+              </div>
+            </div>
             <div className='basis-1/3 flex-1'>
               <a href='https://my-recipesapp.netlify.app' target="_blank" rel="noreferrer">
                 <img src={recipe} alt="recipe" className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive" />
               </a>
               <div className='m-5 text-center text-white'>
-                <a className='dark:text-teal-500 text-gray-600 font-bold underline md:text-2xl' href='https://my-recipesapp.netlify.app' target="_blank" rel="noreferrer">https://my-recipesapp.netlify.app</a>
+                <a className='dark:text-teal-500 text-rose-500 font-bold underline md:text-2xl' href='https://my-recipesapp.netlify.app' target="_blank" rel="noreferrer">https://my-recipesapp.netlify.app</a>
               </div>
             </div>
             <div className='basis-1/3 flex-1'>
@@ -108,7 +117,7 @@ export default function Main() {
                 <img src={techfirm} alt="techfirm" className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive" />
               </a>
               <div className='m-5 text-center text-white'>
-                <a className='dark:text-teal-500 text-gray-600 font-bold underline md:text-2xl' href='https://technology-firm.netlify.app' target="_blank" rel="noreferrer">https://technology-firm.netlify.app</a>
+                <a className='dark:text-teal-500 text-rose-500 font-bold underline md:text-2xl' href='https://technology-firm.netlify.app' target="_blank" rel="noreferrer">https://technology-firm.netlify.app</a>
               </div>
             </div>
             <div className='basis-1/3 flex-1'>
@@ -116,23 +125,7 @@ export default function Main() {
                 <img src={quizzical} alt="quizzical" className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive" />
               </a>
               <div className='m-5 text-center text-white'>
-                <a className='dark:text-teal-500 text-gray-600 font-bold underline md:text-2xl' href='https://myquizzical-app.netlify.app' target="_blank" rel="noreferrer">https://myquizzical-app.netlify.app</a>
-              </div>
-            </div>
-            <div className='basis-1/3 flex-1'>
-              <a href='https://my-tenziesgame.netlify.app' target="_blank" rel="noreferrer">
-                <img src={tenzies} alt="tenzies" className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive" />
-              </a>
-              <div className='m-5 text-center text-white'>
-                <a className='dark:text-teal-500 text-gray-600 font-bold underline md:text-2xl' href='https://my-tenziesgame.netlify.app' target="_blank" rel="noreferrer">https://my-tenziesgame.netlify.app</a>
-              </div>
-            </div>
-            <div className='basis-1/3 flex-1'>
-              <a href='https://itoromfon.github.io/Password-Generator/' target="_blank" rel="noreferrer">
-                <img src={passwordgen} alt="passwordgen" className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive" />
-              </a>
-              <div className='m-5 text-center text-white'>
-                <a className='dark:text-teal-500 text-gray-600 font-bold underline md:text-2xl' href='https://itoromfon.github.io/Password-Generator/' target="_blank" rel="noreferrer">https://itoromfon.github.io/Password-Generator/</a>
+                <a className='dark:text-teal-500 text-rose-500 font-bold underline md:text-2xl' href='https://myquizzical-app.netlify.app' target="_blank" rel="noreferrer">https://myquizzical-app.netlify.app</a>
               </div>
             </div>
             <div className='basis-1/3 flex-1'>
@@ -140,7 +133,31 @@ export default function Main() {
                 <img src={memegen} alt="memegen" className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive" />
               </a>
               <div className='m-5 text-center text-white'>
-                <a className='dark:text-teal-500 text-gray-600 font-bold underline md:text-2xl' href='https://my-memegeneratorproject.netlify.app' target="_blank" rel="noreferrer">https://my-memegeneratorproject.netlify.app</a>
+                <a className='dark:text-teal-500 text-rose-500 font-bold underline md:text-2xl' href='https://my-memegeneratorproject.netlify.app' target="_blank" rel="noreferrer">https://my-memegeneratorproject.netlify.app</a>
+              </div>
+            </div>
+            <div className='basis-1/3 flex-1'>
+              <a href='https://my-tenziesgame.netlify.app' target="_blank" rel="noreferrer">
+                <img src={tenzies} alt="tenzies" className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive" />
+              </a>
+              <div className='m-5 text-center text-white'>
+            <a className='dark:text-teal-500 text-rose-500 font-bold underline md:text-2xl' href='https://my-tenziesgame.netlify.app' target="_blank" rel="noreferrer">https://my-tenziesgame.netlify.app</a>
+              </div>
+            </div>
+            <div className='basis-1/3 flex-1'>
+              <a href='https://itoromfon.github.io/Password-Generator/' target="_blank" rel="noreferrer">
+                <img src={passwordgen} alt="passwordgen" className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive" />
+              </a>
+              <div className='m-5 text-center text-white'>
+            <a className='dark:text-teal-500 text-rose-500 font-bold underline md:text-2xl' href='https://itoromfon.github.io/Password-Generator/' target="_blank" rel="noreferrer">https://itoromfon.github.io/Password-Generator/</a>
+              </div>
+            </div>
+            <div className='basis-1/3 flex-1'>
+              <a href='https://my-recipesapp.netlify.app' target="_blank" rel="noreferrer">
+                <img src={recipe} alt="recipe" className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive" />
+              </a>
+              <div className='m-5 text-center text-white'>
+                <a className='dark:text-teal-500 text-rose-500 font-bold underline md:text-2xl' href='https://my-recipesapp.netlify.app' target="_blank" rel="noreferrer">https://my-recipesapp.netlify.app</a>
               </div>
             </div>
           </div>
