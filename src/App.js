@@ -12,7 +12,7 @@ export default function App() {
     console.log("This is the darkmode version")
   }
   return (
-    <div className={darkMode ? "dark" : "white"}>
+    <div className={darkMode ? "dark" : "yellow"}>
       <div className='dark:bg-gray-900 min-h-screen px-8 md:px-20 pb-20'>
           <Navbar 
             handleClick={handleClick}

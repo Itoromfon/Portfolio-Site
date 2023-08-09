@@ -6,7 +6,7 @@ export default function Navbar(props) {
     <nav className='flex justify-between py-10 mb-10'>
         <a 
          className='dark:text-white text-rose-500 text-2xl font-bold font-MyFont md:text-3xl'
-         href='#'
+        href='https://itoromfon-portfolio.vercel.app/'
         >
           MyPortfolio
         </a>
@@ -18,7 +18,7 @@ export default function Navbar(props) {
                 />
             </li>
             <li>
-          <a target='_blank' rel='noreferrer' href='https://drive.google.com/file/d/1qPL0_URisnRUdP4HE60XimklYltyPYyY/view?usp=drive_link' className='dark:bg-teal-500 bg-rose-400 hover:bg-teal-600 text-white font-bold text-lg px-4 py-2 rounded-lg ml-3 md:ml-8 cursor-pointer'>Resume</a>
+          <a target='_blank' rel='noreferrer' href='https://drive.google.com/file/d/1Z1CGTfXwYloJsoPFrC0pzaVm7CWzieqN/view?usp=sharing' className='dark:bg-teal-500 bg-rose-400 hover:bg-teal-600 text-white font-bold text-lg px-4 py-2 rounded-lg ml-3 md:ml-8 cursor-pointer'>Resume</a>
             </li>
         </ul>
     </nav>
