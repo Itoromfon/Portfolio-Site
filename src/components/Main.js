@@ -12,6 +12,7 @@ import { FaReact } from "react-icons/fa"
 // import itoromfon from "../images/itoromfon.png"
 import mfon from "../images/mfon.png"
 import recipe from "../images/recipe.png"
+import dashboard from "../images/dashboard.png"
 import techfirm from "../images/techfirm.png"
 import quizzical from "../images/quizzical.png"
 import tenzies from "../images/tenzies.png"
@@ -105,6 +106,16 @@ export default function Main() {
               </div>
             </div>
             <div className='basis-1/3 flex-1'>
+              <a href='https://itoro-dashboard.vercel.app/' target="_blank" rel="noreferrer">
+                <img src={dashboard} alt="dashboard" className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive" />
+              </a>
+              <div className='m-5 text-center text-white'>
+                <a className='dark:text-teal-500 text-rose-500 font-bold underline md:text-2xl' href='https://itoro-dashboard.vercel.app/' target="_blank" rel="noreferrer">
+                  https://itoro-dashboard.vercel.app/
+                </a>
+              </div>
+            </div>
+            <div className='basis-1/3 flex-1'>
               <a href='https://my-recipesapp.netlify.app' target="_blank" rel="noreferrer">
                 <img src={recipe} alt="recipe" className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive" />
               </a>
@@ -150,14 +161,6 @@ export default function Main() {
               </a>
               <div className='m-5 text-center text-white'>
             <a className='dark:text-teal-500 text-rose-500 font-bold underline md:text-2xl' href='https://itoromfon.github.io/Password-Generator/' target="_blank" rel="noreferrer">https://itoromfon.github.io/Password-Generator/</a>
-              </div>
-            </div>
-            <div className='basis-1/3 flex-1'>
-              <a href='https://my-recipesapp.netlify.app' target="_blank" rel="noreferrer">
-                <img src={recipe} alt="recipe" className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive" />
-              </a>
-              <div className='m-5 text-center text-white'>
-                <a className='dark:text-teal-500 text-rose-500 font-bold underline md:text-2xl' href='https://my-recipesapp.netlify.app' target="_blank" rel="noreferrer">https://my-recipesapp.netlify.app</a>
               </div>
             </div>
           </div>
