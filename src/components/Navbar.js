@@ -18,7 +18,7 @@ export default function Navbar(props) {
                 />
             </li>
             <li>
-          <a target='_blank' rel='noreferrer' href='https://drive.google.com/file/d/1D7sNm6dPHrCNUmr4TtWwzkPzoqc71MTt/view?usp=sharing' className='dark:bg-teal-500 bg-rose-400 hover:bg-teal-600 text-white font-bold text-lg px-4 py-2 rounded-lg ml-3 md:ml-8 cursor-pointer'>Resume</a>
+          <a target='_blank' rel='noreferrer' href='https://drive.google.com/file/d/1QvvyRVkaX6eTKeNc7kC8gbMJJTWfOeuE/view?usp=sharing' className='dark:bg-teal-500 bg-rose-400 hover:bg-teal-600 text-white font-bold text-lg px-4 py-2 rounded-lg ml-3 md:ml-8 cursor-pointer'>Resume</a>
             </li>
         </ul>
     </nav>
